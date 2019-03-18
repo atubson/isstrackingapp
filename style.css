@@ -1,0 +1,159 @@
+/* ----------------------------
+/*  Name: ISS Tracking
+    Author: JZ
+    Version: 1.0
+/* -------------------------- */
+body {
+    margin: 0;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(100, 100, 100)
+}
+.navbar {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.header {
+    padding: 10px 20px;
+    font-family: 'Roboto';
+    font-size: 40px;
+}
+.map-container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+.googleMap {
+    width: 50%;
+}
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+.btn {
+    width: 30%;
+    height: 100px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    border: 2px solid #b80909;
+    transition: background-color 0.5s linear;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(253, 76, 76);
+}
+.btn-disabled {
+    width: 30%;
+    height: 100px;
+    background-color: rgba(197, 1, 1, 0.397);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    border: 2px solid #b80909;
+    transition: background-color 0.5s linear;
+    pointer-events: none;
+
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 50%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.cell {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 4px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+@media screen and (max-width: 1086px) {
+    .btn {
+        width: 50%;
+    }
+    .btn-disabled {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .grid-table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .header {
+        font-size: 25px;
+    }
+
+    .map-container {
+        flex-direction: column;
+    }
+    .googleMap {
+        width: 100%;
+        height: 80%;
+    }
+
+    .btn-container {
+        margin-top: 10px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .btn {
+        width: 30%;
+        font-size: 15px;
+    }
+
+    .btn-disabled {
+        width: 30%;
+        font-size: 15px;
+    }
+
+    .cell {
+        font-size: 10px;
+    }
+
+
+}
